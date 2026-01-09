@@ -382,15 +382,12 @@ h1, h2, h3, h4 {
 
     .mobile-header {
         display: block;
-        background-color: var(--color-background);
+        background-color: var(--color-background-alt);
         border-bottom: 1px solid var(--color-border);
         padding: var(--spacing-md) var(--spacing-lg);
-        position: sticky;
-        top: 0;
-        z-index: 100;
     }
 
-    .mobile-header-content {
+    .mobile-header-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -398,6 +395,38 @@ h1, h2, h3, h4 {
 
     .mobile-header h1 {
         font-size: 1.25rem;
+    }
+
+    .mobile-profile {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid var(--color-border);
+    }
+
+    .mobile-headshot {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 2px solid var(--color-border);
+        flex-shrink: 0;
+    }
+
+    .mobile-info {
+        flex: 1;
+    }
+
+    .mobile-title {
+        font-size: 0.95rem;
+        color: var(--color-text-light);
+        margin-bottom: 0.25rem;
+    }
+
+    .mobile-institution {
+        font-size: 0.9rem;
+        color: var(--color-text-light);
     }
 
     .nav-toggle {
@@ -421,6 +450,8 @@ h1, h2, h3, h4 {
     .mobile-nav {
         display: none;
         padding-top: var(--spacing-sm);
+        margin-top: var(--spacing-sm);
+        border-top: 1px solid var(--color-border);
     }
 
     .mobile-nav.active {
@@ -439,6 +470,10 @@ h1, h2, h3, h4 {
         padding: var(--spacing-sm) 0;
         border-bottom: 1px solid var(--color-border);
         font-weight: 500;
+    }
+
+    .mobile-nav-links li:last-child a {
+        border-bottom: none;
     }
 
     .main {
@@ -470,5 +505,26 @@ h1, h2, h3, h4 {
 
     .mobile-header {
         padding: var(--spacing-sm);
+    }
+
+    .mobile-header h1 {
+        font-size: 1.1rem;
+    }
+
+    .mobile-headshot {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mobile-title {
+        font-size: 0.85rem;
+    }
+
+    .mobile-institution {
+        font-size: 0.8rem;
+    }
+
+    .mobile-profile {
+        gap: var(--spacing-sm);
     }
 }
