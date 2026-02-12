@@ -9,7 +9,7 @@
     --color-background-alt: #f5f5f5;
     --color-border: #e0e0e0;
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --max-width: 800px;
+    --max-width: 900px;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -56,89 +56,77 @@ h1, h2, h3, h4 {
 
 /* Page Layout */
 .page-wrapper {
-    display: flex;
-    min-height: 100vh;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 280px;
-    flex-shrink: 0;
-    background-color: var(--color-background-alt);
-    border-right: 1px solid var(--color-border);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    overflow-y: auto;
-}
-
-.sidebar-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
     padding: var(--spacing-xl) var(--spacing-lg);
 }
 
-.sidebar h1 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: var(--spacing-xs);
-}
-
-.sidebar .title {
-    font-size: 0.9rem;
-    color: var(--color-text-light);
-    margin-bottom: 0.25rem;
-}
-
-.sidebar .institution {
-    font-size: 0.85rem;
-    color: var(--color-text-light);
-    margin-bottom: var(--spacing-lg);
+/* Profile Hero */
+.profile-hero {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: flex-start;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .headshot {
-    width: 180px;
-    height: 180px;
+    width: 230px;
+    flex-shrink: 0;
     object-fit: cover;
-    border: 3px solid var(--color-border);
-    margin-bottom: var(--spacing-md);
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
     display: block;
 }
 
-/* Sidebar Navigation */
-.nav {
-    margin-top: var(--spacing-md);
+.profile-info h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-
-.nav-links a {
-    font-weight: 500;
+.profile-info .title {
     font-size: 1rem;
-    padding: var(--spacing-xs) 0;
-    display: block;
-    border-bottom: 1px solid transparent;
+    color: var(--color-text-light);
+    margin-bottom: 0.15rem;
 }
 
-.nav-links a:hover {
+.profile-info .institution {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+.profile-links {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.profile-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    padding-bottom: 1px;
+    line-height: 1;
+}
+
+.profile-links a:hover {
     color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
 }
 
-/* Mobile Header - Hidden on desktop */
-.mobile-header {
-    display: none;
+.bio p {
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
 }
 
-/* Main Content */
-.main {
-    flex: 1;
-    margin-left: 280px;
-    max-width: var(--max-width);
-    padding: var(--spacing-xl) var(--spacing-lg);
+.bio p:last-child {
+    margin-bottom: 0;
 }
 
 /* Sections */
@@ -159,19 +147,6 @@ h1, h2, h3, h4 {
     padding-bottom: var(--spacing-xs);
     border-bottom: 3px solid var(--color-accent);
     display: inline-block;
-}
-
-/* About Section */
-.about-content p {
-    margin-bottom: var(--spacing-md);
-}
-
-.about-content p:last-child {
-    margin-bottom: 0;
-}
-
-.cv-button-wrapper {
-    margin-top: var(--spacing-lg);
 }
 
 /* Research Section */
@@ -318,22 +293,6 @@ h1, h2, h3, h4 {
     color: var(--color-text);
 }
 
-/* CV Section */
-.cv-link {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background-color var(--transition-speed);
-}
-
-.cv-link:hover {
-    background-color: var(--color-primary-light);
-    color: white;
-}
-
 /* Contact Section */
 .contact-info p {
     margin-bottom: var(--spacing-sm);
@@ -343,28 +302,6 @@ h1, h2, h3, h4 {
     color: var(--color-primary);
 }
 
-.social-links {
-    margin-top: var(--spacing-md);
-    display: flex;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
-}
-
-.social-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--color-primary);
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: all var(--transition-speed);
-}
-
-.social-link:hover {
-    background-color: var(--color-primary);
-    color: white;
-}
-
 /* Footer */
 .footer {
     text-align: center;
@@ -372,113 +309,25 @@ h1, h2, h3, h4 {
     border-top: 1px solid var(--color-border);
     color: var(--color-text-light);
     font-size: 0.9rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
-    .sidebar {
-        display: none;
-    }
-
-    .mobile-header {
-        display: block;
-        background-color: var(--color-background-alt);
-        border-bottom: 1px solid var(--color-border);
-        padding: var(--spacing-md) var(--spacing-lg);
-    }
-
-    .mobile-header-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .mobile-header h1 {
-        font-size: 1.25rem;
-    }
-
-    .mobile-profile {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-md);
-        margin-top: var(--spacing-md);
-        padding-top: var(--spacing-md);
-        border-top: 1px solid var(--color-border);
-    }
-
-    .mobile-headshot {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border: 2px solid var(--color-border);
-        flex-shrink: 0;
-    }
-
-    .mobile-info {
-        flex: 1;
-    }
-
-    .mobile-title {
-        font-size: 0.95rem;
-        color: var(--color-text-light);
-        margin-bottom: 0.25rem;
-    }
-
-    .mobile-institution {
-        font-size: 0.9rem;
-        color: var(--color-text-light);
-    }
-
-    .nav-toggle {
-        display: flex;
+@media (max-width: 680px) {
+    .profile-hero {
         flex-direction: column;
-        gap: 4px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: var(--spacing-xs);
+        align-items: center;
+        text-align: center;
+        gap: var(--spacing-lg);
     }
 
-    .nav-toggle span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background-color: var(--color-primary);
-        transition: transform var(--transition-speed);
+    .headshot {
+        width: 180px;
     }
 
-    .mobile-nav {
-        display: none;
-        padding-top: var(--spacing-sm);
-        margin-top: var(--spacing-sm);
-        border-top: 1px solid var(--color-border);
-    }
-
-    .mobile-nav.active {
-        display: block;
-    }
-
-    .mobile-nav-links {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .mobile-nav-links a {
-        display: block;
-        padding: var(--spacing-sm) 0;
-        border-bottom: 1px solid var(--color-border);
-        font-weight: 500;
-    }
-
-    .mobile-nav-links li:last-child a {
-        border-bottom: none;
-    }
-
-    .main {
-        margin-left: 0;
-        padding: var(--spacing-lg);
+    .profile-links {
+        justify-content: center;
     }
 
     .paper-header {
@@ -495,36 +344,15 @@ h1, h2, h3, h4 {
         font-size: 15px;
     }
 
-    .main {
-        padding: var(--spacing-md) var(--spacing-sm);
+    .page-wrapper {
+        padding: var(--spacing-lg) var(--spacing-sm);
     }
 
     .section h2 {
         font-size: 1.5rem;
     }
 
-    .mobile-header {
-        padding: var(--spacing-sm);
-    }
-
-    .mobile-header h1 {
-        font-size: 1.1rem;
-    }
-
-    .mobile-headshot {
-        width: 80px;
-        height: 80px;
-    }
-
-    .mobile-title {
-        font-size: 0.85rem;
-    }
-
-    .mobile-institution {
-        font-size: 0.8rem;
-    }
-
-    .mobile-profile {
-        gap: var(--spacing-sm);
+    .profile-info h1 {
+        font-size: 1.6rem;
     }
 }

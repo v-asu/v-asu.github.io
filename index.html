@@ -12,139 +12,98 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-content">
-                <img src="images/headshot.jpg" alt="Vasu Chaudhary" class="headshot">
+
+        <!-- Profile Header -->
+        <header class="profile-hero" id="about">
+            <img src="images/headshot.jpg" alt="Vasu Chaudhary" class="headshot">
+            <div class="profile-info">
                 <h1>Vasu Chaudhary</h1>
                 <p class="title">PhD Candidate in Economics</p>
                 <p class="institution">Northwestern University</p>
-                <nav class="nav">
-                    <ul class="nav-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#research">Research</a></li>
-                        <li><a href="files/cv.pdf" target="_blank">CV</a></li>
-                        <li><a href="https://scholar.google.com/citations?user=9gy9xK8AAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                <nav class="profile-links">
+                    <a href="files/cv.pdf" target="_blank">CV</a>
+                    <a href="https://scholar.google.com/citations?user=9gy9xK8AAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a>
+                    <a href="mailto:vasuch@u.northwestern.edu">Email</a>
                 </nav>
-            </div>
-        </aside>
-
-        <!-- Mobile Header -->
-        <header class="mobile-header">
-            <div class="mobile-header-top">
-                <h1>Vasu Chaudhary</h1>
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <div class="mobile-profile">
-                <img src="images/headshot.jpg" alt="Vasu Chaudhary" class="mobile-headshot">
-                <div class="mobile-info">
-                    <p class="mobile-title">PhD Candidate in Economics</p>
-                    <p class="mobile-institution">Northwestern University</p>
+                <div class="bio">
+                    <p>I am a PhD candidate in Economics at Northwestern University. My research focuses on
+                    development economics and social networks.</p>
+                    <p>Prior to my PhD, I worked as a Senior Research Associate at J-PAL. I received my M.A. in Economics from the Delhi School of Economics and my B.A. in Economics from Shri Ram College of Commerce, University of Delhi.</p>
                 </div>
             </div>
-            <nav class="mobile-nav">
-                <ul class="mobile-nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="files/cv.pdf" target="_blank">CV</a></li>
-                    <li><a href="https://scholar.google.com/citations?user=9gy9xK8AAAAJ&hl=en&oi=sra" target="_blank">Google Scholar</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </header>
 
         <main class="main">
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2>About</h2>
-            <div class="about-content">
-                <p>
-                    I am a PhD candidate in Economics at Northwestern University. My research focuses on
-                    development economics and social networks.
-                </p>
 
-                <p>
-                    Prior to my PhD, I worked as a Senior Research Associate at J-PAL. I received my M.A. in Economics from the Delhi School of Economics and my B.A. in Economics from Shri Ram College of Commerce, University of Delhi.
-                </p>
-            </div>
-        </section>
+            <!-- Research Section -->
+            <section id="research" class="section">
+                <h2>Research</h2>
 
-        <!-- Research Section -->
-        <section id="research" class="section">
-            <h2>Research</h2>
+                <div class="research-category">
+                    <h3>Working Papers</h3>
 
-            <div class="research-category">
-                <h3>Working Papers</h3>
-
-                <div class="paper">
-                    <div class="paper-header">
-                        <div class="paper-info">
-                            <h4 class="paper-title">Multiplexing in Networks and Diffusion</h4>
-                            <p class="paper-authors">with Arun Chandrasekhar, Benjamin Golub, and Matthew Jackson</p>
-                            <p class="paper-status">Submitted</p>
+                    <div class="paper">
+                        <div class="paper-header">
+                            <div class="paper-info">
+                                <h4 class="paper-title">Multiplexing in Networks and Diffusion</h4>
+                                <p class="paper-authors">with Arun Chandrasekhar, Benjamin Golub, and Matthew Jackson</p>
+                                <p class="paper-status">Submitted</p>
+                            </div>
+                            <div class="paper-links">
+                                <a href="files/2412.11957v2.pdf" class="paper-link" target="_blank">PDF</a>
+                                <a href="https://arxiv.org/abs/2412.11957" class="paper-link" target="_blank">arXiv</a>
+                            </div>
                         </div>
-                        <div class="paper-links">
-                            <a href="files/2412.11957v2.pdf" class="paper-link" target="_blank">PDF</a>
-                            <a href="https://arxiv.org/abs/2412.11957" class="paper-link" target="_blank">arXiv</a>
+                        <button class="abstract-toggle" aria-expanded="false">
+                            <span class="toggle-icon">&#9654;</span> Abstract
+                        </button>
+                        <div class="abstract-content">
+                            <p>
+                                Social and economic networks are often multiplexed, meaning that people are connected by different types of relationships—such as borrowing goods and giving advice. We make two contributions to the study of multiplexing and the understanding of simple versus complex contagion. On the theoretical side, we introduce a model and theoretical results about diffusion in multiplex networks. We show that multiplexing impedes the spread of simple contagions, such as diseases or basic information that only require one interaction to transmit an infection. We show, however that multiplexing enhances the spread of a complex contagion when infection rates are low, but then impedes complex contagion if infection rates become high. On the empirical side, we document empirical multiplexing patterns in Indian village data. We show that relationships such as socializing, advising, helping, and lending are correlated but distinct, while commonly used proxies for networks based on ethnicity and geography are nearly uncorrelated with actual relationships. We also show that these layers and their overlap affect information diffusion in a field experiment. The advice network is the best predictor of diffusion, but combining layers improves predictions further. Villages with greater overlap between layers—more multiplexing—experience less overall diffusion. Finally, we identify differences in multiplexing by gender and connectedness. These have implications for inequality in diffusion-mediated outcomes such as access to information and adherence to norms.
+                            </p>
                         </div>
                     </div>
-                    <button class="abstract-toggle" aria-expanded="false">
-                        <span class="toggle-icon">&#9654;</span> Abstract
-                    </button>
-                    <div class="abstract-content">
-                        <p>
-                            Social and economic networks are often multiplexed, meaning that people are connected by different types of relationships—such as borrowing goods and giving advice. We make two contributions to the study of multiplexing and the understanding of simple versus complex contagion. On the theoretical side, we introduce a model and theoretical results about diffusion in multiplex networks. We show that multiplexing impedes the spread of simple contagions, such as diseases or basic information that only require one interaction to transmit an infection. We show, however that multiplexing enhances the spread of a complex contagion when infection rates are low, but then impedes complex contagion if infection rates become high. On the empirical side, we document empirical multiplexing patterns in Indian village data. We show that relationships such as socializing, advising, helping, and lending are correlated but distinct, while commonly used proxies for networks based on ethnicity and geography are nearly uncorrelated with actual relationships. We also show that these layers and their overlap affect information diffusion in a field experiment. The advice network is the best predictor of diffusion, but combining layers improves predictions further. Villages with greater overlap between layers—more multiplexing—experience less overall diffusion. Finally, we identify differences in multiplexing by gender and connectedness. These have implications for inequality in diffusion-mediated outcomes such as access to information and adherence to norms.
-                        </p>
+
+                    <div class="paper">
+                        <div class="paper-header">
+                            <div class="paper-info">
+                                <h4 class="paper-title">Misperceived Peer Pressure in Schools and The Network Origins of Pluralistic Ignorance</h4>
+                                <p class="paper-authors">with Krishna Dasaratha, William Murdoch III, and Dev Patel</p>
+                                <p class="paper-status">Working Paper</p>
+                            </div>
+                        </div>
+                        <button class="abstract-toggle" aria-expanded="false">
+                            <span class="toggle-icon">&#9654;</span> Abstract
+                        </button>
+                        <div class="abstract-content">
+                            <p>Draft coming soon.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="paper">
-                    <div class="paper-header">
-                        <div class="paper-info">
-                            <h4 class="paper-title">Misperceived Peer Pressure in Schools and The Network Origins of Pluralistic Ignorance</h4>
-                            <p class="paper-authors">with Krishna Dasaratha, William Murdoch III, and Dev Patel</p>
-                            <p class="paper-status">Working Paper</p>
-                        </div>
-                    </div>
-                    <button class="abstract-toggle" aria-expanded="false">
-                        <span class="toggle-icon">&#9654;</span> Abstract
-                    </button>
-                    <div class="abstract-content">
-                        <p>
-                            Draft coming soon.
-                        </p>
-                    </div>
+                <div class="research-category">
+                    <h3>Work in Progress</h3>
+                    <ul class="wip-list">
+                        <li>Diffusion of Rival Information</li>
+                    </ul>
                 </div>
-            </div>
+            </section>
 
-            <div class="research-category">
-                <h3>Work in Progress</h3>
-                <ul class="wip-list">
-                    <li>Diffusion of Rival Information</li>
-                </ul>
-            </div>
-        </section>
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <h2>Contact</h2>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:vasuch@u.northwestern.edu">vasuch@u.northwestern.edu</a></p>
+                    <p><strong>Address:</strong><br>
+                        Department of Economics<br>
+                        Northwestern University<br>
+                        2211 Campus Drive<br>
+                        Evanston, IL 60208
+                    </p>
+                </div>
+            </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p><strong>Email:</strong> <a href="mailto:vasuch@u.northwestern.edu">vasuch@u.northwestern.edu</a></p>
-                <p><strong>Address:</strong><br>
-                    Department of Economics<br>
-                    Northwestern University<br>
-                    2211 Campus Drive<br>
-                    Evanston, IL 60208
-                </p>
-            </div>
-        </section>
-    </main>
+        </main>
     </div>
 
     <footer class="footer">
