@@ -20,18 +20,19 @@ python3 -m http.server 8000
 
 All content lives in a single `index.html`. Styling is in `css/style.css` and interactivity in `js/main.js`.
 
-**Layout:** Fixed 280px sidebar on desktop (profile, nav) + scrollable main content area. Below 900px, sidebar hides and a mobile hamburger header appears. The 900px and 480px breakpoints are defined in `style.css`.
+**Layout:** Centered single-column page (max-width 900px) with a two-column profile hero at the top — photo on the left (230px wide), name/title/links/bio on the right. Below the hero, `<main>` holds the Research and Contact sections. No sidebar, no hamburger menu.
 
-**CSS design tokens** are CSS variables at the top of `style.css` — color palette, spacing scale, and max content width (800px). Modify these to change the site-wide visual style.
+**Breakpoints:** At ≤680px the hero stacks vertically (photo centered on top, text below). At ≤480px font sizes reduce slightly. Both defined in `style.css`.
 
-**JavaScript** (`main.js`) handles three things only:
+**CSS design tokens** are CSS variables at the top of `style.css` — color palette, spacing scale, and max content width (900px). Modify these to change the site-wide visual style.
+
+**JavaScript** (`main.js`) handles two things only:
 1. Abstract expand/collapse toggles (uses `aria-expanded` + `max-height` transition)
-2. Mobile nav toggle (adds/removes `.active` class)
-3. Smooth scroll for anchor links
+2. Smooth scroll for anchor links
 
 ## Content Updates
 
-- **New research paper:** Add a `.paper-card` div inside `#research` following the existing pattern; include a `<button class="abstract-toggle">` with a matching `<div class="abstract-content">` for the expandable abstract.
+- **New research paper:** Add a `.paper` div inside `#research` following the existing pattern; include a `<button class="abstract-toggle">` with a matching `<div class="abstract-content">` for the expandable abstract.
 - **CV / PDFs:** Drop files into `files/` and update the `href` attributes in `index.html`.
-- **Headshot:** Replace `images/headshot.jpg` (displayed at 150×150px, circular crop via CSS).
-- **Navigation links:** Sidebar nav (`<aside>`) and mobile nav (`.mobile-nav`) are separate elements — update both when adding sections.
+- **Headshot:** Replace `images/headshot.jpg` (displayed at 230px wide, natural height, 4px border-radius).
+- **Profile links (CV, Google Scholar, Email):** Inline links inside `.profile-links` nav in the `<header class="profile-hero">` — only one place to update.
