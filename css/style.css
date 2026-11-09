@@ -270,7 +270,7 @@ h1, h2, h3, h4 {
 }
 
 .abstract-content.expanded {
-    max-height: 500px;
+    max-height: none;
     padding-top: var(--spacing-sm);
 }
 
